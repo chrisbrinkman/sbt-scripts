@@ -13,10 +13,8 @@ def inputOrDefault(prompt, default):
     return val;
 
 lines = []
-def appendSbtKeyVal(key, defaulVal, appendLineBreak: bool = True):
-    lines.append("\n{} := \"{}\"".format(key, inputOrDefault(key, defaulVal)))
-    if appendLineBreak:
-        lines.append("\n")
+def appendSbtKeyVal(key, defaulVal):
+    lines.append("\n{} := \"{}\"\n".format(key, inputOrDefault(key, defaulVal)))
     return;
 
 # grab all values needed for the build.sbt file
