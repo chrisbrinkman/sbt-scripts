@@ -1,13 +1,17 @@
 import os
 from sys import argv
 
-scalaVer = raw_input("scala version (2.11.2): ")
-name = raw_input("project name: ")
-ver = raw_input("project version (1.0-SNAPSHOT): ")
-rootDir = raw_input("root dir (.): ")
+defaultScalaVer = "2.11.2"
+defaultVer = "1.0-SNAPSHOT"
+defaultDir = "."
 
-if scalaVer == "": scalaVer = "2.11.2"
-if ver == "": ver = "1.0-SNAPSHOT"
+scalaVer = raw_input("scala version (" + defaultScalaVer + "): ")
+name     = raw_input("project name: ")
+ver      = raw_input("project version (" + defaultVer + "): ")
+rootDir  = raw_input("project dir (" + defaultDir + "): ")
+
+if scalaVer == "": scalaVer = defaultScalaVer
+if ver == "": ver = defaultVer
 if rootDir == "": rootDir  = "."
 
 if not os.path.exists(rootDir):
