@@ -1,3 +1,4 @@
+#!/usr/local/bin/python3.4
 import os
 
 def ensureDir(dir):
